@@ -1,0 +1,96 @@
+body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: radial-gradient(ellipse at center, #0d0d0d 0%, #000000 100%);
+      font-family: Press Start 2P, Lobster;
+      overflow: hidden;
+    }
+    .press-start-2p-regular {
+        font-family: "Press Start 2P", system-ui;
+        font-weight: 400;
+        font-style: normal;
+    }
+    
+    .conteiner{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80%;
+    }
+    .hed{
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    color: #2ef0e3;
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #a7a6a6, 0 0 15px #7a7a7a;
+    }
+
+    .glow-text {
+    font-size: 24px;
+    color: white;
+    animation: glow 4s infinite linear;
+  }
+
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 10px #ff004c, 0 0 20px #ff004c;
+    }
+    25% {
+      text-shadow: 0 0 10px #00fff0, 0 0 20px #00fff0;
+    }
+    50% {
+      text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00;
+    }
+    75% {
+      text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+    }
+    100% {
+      text-shadow: 0 0 10px #ff004c, 0 0 20px #ff004c;
+    }
+  }
+    .start-button {
+      padding: 20px 50px;
+      font-size: 24px;
+      color: #fff;
+      background: #111;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      overflow: hidden;
+    }
+
+    .start-button::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg,
+        #ff004c, #ff7b00, #f7ff00,
+        #00ff87, #00cfff, #2b65ff,
+        #8000ff, #ff0084, #ff004c
+      );
+      background-size: 300%;
+      z-index: -1;
+      filter: blur(15px);
+      animation: animateGlow 8s linear infinite;
+      border-radius: 20px;
+    }
+
+    .start-button:hover {
+      background-color: #111;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    }
+
+    @keyframes animateGlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
